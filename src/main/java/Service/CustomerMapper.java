@@ -1,6 +1,6 @@
 package Service;
 
-import api.CustomerDTO;
+import dto.CustomerDTO;
 import domain.customer.Customer;
 
 import java.util.List;

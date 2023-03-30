@@ -1,16 +1,17 @@
 package domain.customer;
 
-import api.CustomerDTO;
+import dto.CustomerDTO;
+
+import java.util.UUID;
 
 public class Customer {
-    private final int customerId;
-    private static int counter;
+    private UUID customerId;
     private final Name name;
     private final Address address;
     private final Contacts contacts;
 
     public Customer(Name name, Address address, Contacts contacts) {
-        this.customerId = counter++;
+        this.customerId = UUID.randomUUID();
         this.name = name;
         this.address = address;
         this.contacts = contacts;
@@ -32,7 +33,7 @@ public class Customer {
         return contacts;
     }
 
-    public int getCustomerId() {
+    public UUID getCustomerId() {
         return customerId;
     }
 }

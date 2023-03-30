@@ -1,6 +1,6 @@
 package Service;
 
-import api.CustomerDTO;
+import dto.CustomerDTO;
 import domain.customer.CustomerRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,4 +13,9 @@ public class CustomerService {
         this.customerRepository = customerRepository;
     }
     public List<CustomerDTO> getAllCustomers(){return CustomerMapper.listOfCustomersToListOfCustomerDTO(customerRepository.getAllCustomers());}
+    public List<CustomerDTO> getallCustomers(){
+        return customerRepository.getAllCustomers().stream()
+                .map(CustomerDTO::new)
+                .toList();
+    }
 }

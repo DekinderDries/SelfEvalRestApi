@@ -1,4 +1,4 @@
-package api;
+package dto;
 
 import domain.customer.Address;
 import domain.customer.Contacts;
@@ -6,15 +6,16 @@ import domain.customer.Customer;
 import domain.customer.Name;
 
 import java.util.List;
+import java.util.UUID;
 
 public class CustomerDTO {
-    private final int customerId;
+    private String customerId;
     private final Name name;
     private final Address address;
     private final Contacts contacts;
     private List<Customer> listOfCustomers;
 
-    public CustomerDTO(int customerId, Name name, Address address, Contacts contacts) {
+    public CustomerDTO(String customerId, Name name, Address address, Contacts contacts) {
         this.customerId = customerId;
         this.name = name;
         this.address = address;
@@ -37,5 +38,13 @@ public class CustomerDTO {
 
     public Contacts getContacts() {
         return contacts;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public List<Customer> getListOfCustomers() {
+        return listOfCustomers;
     }
 }

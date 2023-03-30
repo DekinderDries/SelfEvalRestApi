@@ -1,8 +1,9 @@
 package api;
 
 import Service.CustomerService;
-import domain.Item;
 import domain.StockAmount;
+import dto.CustomerDTO;
+import dto.ItemDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;

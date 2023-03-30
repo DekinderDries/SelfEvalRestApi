@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Repository
 public class CustomerRepository {
@@ -13,7 +14,7 @@ public class CustomerRepository {
         listOfCustomers.add(customer);
         return customer;
     }
-    public Customer getUserById(int customerID) {
+    public Customer getUserById(UUID customerID) {
         return listOfCustomers.stream()
                 .filter(customer -> customer.getCustomerId() == customerID)
                 .findFirst()
