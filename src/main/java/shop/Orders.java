@@ -1,5 +1,5 @@
 package shop;
-import stock.Item;
+import domain.Item;
 
 public class Orders {
     Item item;
