@@ -14,8 +14,8 @@ public class ShippingDate {
     public static LocalDate now(ZoneId zone) {
         return now(Clock.system(zone).getZone());
     }
-    public int shippingDate(StockAmount stockAmount){
-        if(stockAmount != 0) return shippingDate(LocalDate.now().plusDays(1));
-        if(stockAmount == 0) return shippingDate(LocalDate.now().plusDays(7));
-    }
+//    public int shippingDate(StockAmount stockAmount){
+//        if(stockAmount != 0) return shippingDate(LocalDate.now().plusDays(1));
+//        if(stockAmount == 0) return shippingDate(LocalDate.now().plusDays(7));
+//    }
 }

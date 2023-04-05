@@ -22,7 +22,7 @@ public class CustomerDTO {
         this.contacts = contacts;
     }
     public CustomerDTO(Customer toCopy){
-        this.customerId = toCopy.getCustomerId();
+  //      this.customerId = toCopy.getCustomerId();
         this.name = toCopy.getName();
         this.address = toCopy.getAddress();
         this.contacts = toCopy.getContacts();
